@@ -39,3 +39,8 @@ def plot_raw_data():
 	fig.layout.update(title_text='Time Series data with Rangeslider', xaxis_rangeslider_visible=True)
 	st.plotly_chart(fig)
 	
+	plot_raw_data()
+
+# Predict forecast with Prophet.
+df_train = data[['Date','Close']]
+df_train = df_train.rename(columns={"Date": "ds", "Close": "y"})
