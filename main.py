@@ -23,3 +23,7 @@ def load_data(ticker):
     data.reset_index(inplace=True)
     return data
 
+	
+data_load_state = st.text('Loading data...')
+data = load_data(selected_stock)
+data_load_state.text('Loading data... done!')
